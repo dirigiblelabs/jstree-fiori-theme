@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "72";
+  src: url("https://unpkg.com/@sap-theming/theming-base-content@11.1.34/content/Base/baseLib/baseTheme/fonts/72-Regular-full.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "72";
+  src: url("https://unpkg.com/@sap-theming/theming-base-content@11.1.34/content/Base/baseLib/baseTheme/fonts/72-Bold-full.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "72";
+  src: url("https://unpkg.com/@sap-theming/theming-base-content@11.1.34/content/Base/baseLib/baseTheme/fonts/72-Light-full.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SAP-icons";
+  src: url("https://unpkg.com/@sap-theming/theming-base-content@11.1.34/content/Base/baseLib/baseTheme/fonts/SAP-icons.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BusinessSuiteInAppSymbols";
+  src: url("https://unpkg.com/@sap-theming/theming-base-content@11.1.34/content/Base/baseLib/baseTheme/fonts/BusinessSuiteInAppSymbols.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SAP-icons-TNT";
+  src: url("https://unpkg.com/@sap-theming/theming-base-content@11.1.34/content/Base/baseLib/baseTheme/fonts/SAP-icons-TNT.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background: var(--sapBackgroundColor);
+}
