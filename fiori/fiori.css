@@ -612,7 +612,6 @@
 .jstree-fiori-compact .jstree-leaf > .jstree-ocl {
   background-image: none;
 }
-/* .jstree-fiori-compact .jstree-themeicon {} */
 .jstree-fiori-compact > .jstree-no-dots .jstree-node,
 .jstree-fiori-compact > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
@@ -642,8 +641,6 @@
 .jstree-fiori-compact .jstree-disabled.jstree-clicked {
   background: var(--sapList_Background, #fff);
 }
-/* .jstree-fiori-compact .jstree-checkbox {} */
-/* .jstree-fiori-compact .jstree-checkbox:hover {} */
 .jstree-fiori-compact.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
 .jstree-fiori-compact .jstree-checked > .jstree-checkbox {
   mask-size: 1rem;
@@ -653,8 +650,6 @@
   -webkit-mask-image: url("../fiori/checkbox-checked.svg");
   mask-image: url("../fiori/checkbox-checked.svg");
 }
-/* .jstree-fiori-compact.jstree-checkbox-selection .jstree-clicked>.jstree-checkbox:hover,
-.jstree-fiori-compact .jstree-checked>.jstree-checkbox:hover {} */
 .jstree-fiori-compact .jstree-anchor > .jstree-undetermined {
   mask-size: 1rem;
   mask-repeat: no-repeat;
@@ -663,17 +658,6 @@
   -webkit-mask-image: url("../fiori/checkbox-tristate.svg");
   mask-image: url("../fiori/checkbox-tristate.svg");
 }
-/* .jstree-fiori-compact .jstree-anchor>.jstree-undetermined:hover {} */
-/* .jstree-fiori-compact>.jstree-striped {} */
-/* .jstree-fiori-compact.jstree-rtl .jstree-node {} */
-/* .jstree-fiori-compact.jstree-rtl .jstree-last {} */
-/* .jstree-fiori-compact.jstree-rtl .jstree-open>.jstree-ocl {}
-.jstree-fiori-compact.jstree-rtl .jstree-closed>.jstree-ocl {}
-.jstree-fiori-compact.jstree-rtl .jstree-leaf>.jstree-ocl {} */
-/* .jstree-fiori-compact.jstree-rtl>.jstree-no-dots .jstree-node,
-.jstree-fiori-compact.jstree-rtl>.jstree-no-dots .jstree-leaf>.jstree-ocl {} */
-/* .jstree-fiori-compact.jstree-rtl>.jstree-no-dots .jstree-open>.jstree-ocl {}
-.jstree-fiori-compact.jstree-rtl>.jstree-no-dots .jstree-closed>.jstree-ocl {} */
 .jstree-fiori-compact .jstree-themeicon-custom {
   background-color: transparent;
   background-image: none;
@@ -727,10 +711,6 @@
   height: 2rem;
   line-height: 2rem;
 }
-/* #jstree-dnd.jstree-fiori-compact .jstree-ok {}
-#jstree-dnd.jstree-fiori-compact .jstree-er {} */
-/* .jstree-fiori-compact.jstree-rtl .jstree-node {} */
-/* .jstree-fiori-compact.jstree-rtl .jstree-last {} */
 /* Dirigible-specific stuff */
 .dg-jstree-indicator {
   display: flex;

@@ -53,7 +53,6 @@ let data = [
     },
     {
         text: "Project 3",
-        state: { opened: false },
         type: "gitProject",
         children: [
             {
@@ -113,45 +112,11 @@ let data = [
             },
         ],
     },
+    {
+        text: "Unknown file",
+        type: "image-file"
+    },
 ];
-
-function checkChildrenForChanges(children) {
-    for (let i = 0; i < children.length; i++) {
-        if (
-            children[i].state && (
-                children[i].state.added
-                || children[i].state.modified
-                || children[i].state.deleted
-                || children[i].state.untracked
-                || children[i].state.conflict
-                || children[i].state.renamed
-            )
-        ) {
-            return true;
-        } else if (children[i].children) {
-            if (checkChildrenForChanges(children[i].children)) {
-                if (children[i].state) children[i].state.containsChanges = true;
-                else children[i].state = { containsChanges: true };
-                return true;
-            }
-        }
-    }
-    return false;
-}
-
-function setParentStatus(parents) {
-    // Determines if a child object has been modified. If it has, it sets 'containsChanges' to true
-    // 'containsChanges' is used by the indicator plugin.
-    for (let i = 0; i < parents.length; i++) {
-        if (parents[i].children) {
-            if (checkChildrenForChanges(parents[i].children)) {
-                if (parents[i].state) parents[i].state.containsChanges = true;
-                else parents[i].state = { containsChanges: true };
-            };
-        }
-    }
-    return parents;
-}
 
 $('#jstree_demo').jstree({
     core: {
@@ -159,8 +124,9 @@ $('#jstree_demo').jstree({
             name: "fiori",
             // variant: "compact",
         },
-        data: setParentStatus(data),
+        data: data,
     },
+    plugins: ["contextmenu", "wholerow", "dnd", "search", "checkbox", "types", "indicator"],
     types: {
         "default": {
             icon: "sap-icon--question-mark"
@@ -177,19 +143,6 @@ $('#jstree_demo').jstree({
         gitProject: {
             icon: "jstree-git"
         }
-    },
-    plugins: ["contextmenu", "wholerow", "dnd", "search", "checkbox", "sort", "types", "indicator"],
-    sort: function (firstNodeId, secondNodeId) {
-        firstNode = this.get_node(firstNodeId);
-        secondNode = this.get_node(secondNodeId);
-        if (firstNode.type == secondNode.type) {
-            if (firstNode.text.length === secondNode.text.length)
-                return (firstNode.text < secondNode.text) ? false : true;
-            else if (firstNode.text.length > secondNode.text.length)
-                return (firstNode.text.substring(0, secondNode.text.length - 1) < secondNode.text) ? true : false;
-            else return (firstNode.text < secondNode.text.substring(0, firstNode.text.length - 1)) ? true : false;
-        }
-        else return (firstNode.type === "folder") ? false : true;
     },
     contextmenu: {
         items: {
@@ -209,63 +162,6 @@ $('#jstree_demo').jstree({
                         "label": "File",
                         "icon": "sap-icon--file"
                     },
-                    "javascript": {
-                        "separator_after": false,
-                        "label": "Javascript CJS Service",
-                        "icon": "sap-icon--source-code"
-                    },
-                    "javascript-esm": {
-                        "separator_after": false,
-                        "label": "Javascript ESM Service",
-                        "icon": "sap-icon--source-code"
-                    },
-                    "edm": {
-                        "separator_after": false,
-                        "label": "Entity Data Model"
-                    },
-                    "bpmn": {
-                        "separator_after": true,
-                        "label": "Business Process Model"
-                    },
-                    "access": {
-                        "label": "Access Constraints"
-                    },
-                    "cvsim": {
-                        "label": "CSVIM file"
-                    },
-                    "schema": {
-                        "label": "Database Schema Model"
-                    },
-                    "database-table": {
-                        "label": "Database Table"
-                    },
-                    "database-view": {
-                        "label": "Database View"
-                    },
-                    "extension": {
-                        "label": "Extension"
-                    },
-                    "extensionpoint": {
-                        "label": "Extension Point"
-                    },
-                    "form": {
-                        "label": "Form Definition"
-                    },
-                    "html": {
-                        "label": "HTML5 Page"
-                    },
-                    "listener": {
-                        "label": "Message Listener"
-                    },
-                    "roles": {
-                        "label": "Roles Definitions"
-                    },
-                    "job": {
-                        "label": "Scheduled Job"
-                    },
-                    "websocket": {
-                        "label": "Websocket"
-                    }
                 }
             },
             "copy": {
@@ -298,31 +194,6 @@ $('#jstree_demo').jstree({
                 "shortcut_label": "Del",
                 "icon": "sap-icon--delete"
             },
-            "publish": {
-                "separator_before": true,
-                "label": "Publish",
-                "icon": "sap-icon--arrow-top"
-            },
-            "unpublish": {
-                "separator_before": false,
-                "label": "Unpublish",
-                "icon": "sap-icon--arrow-bottom"
-            },
-            "generate": {
-                "separator_before": true,
-                "label": "Generate",
-                "icon": "sap-icon--generate-shortcut"
-            },
-            "upload": {
-                "separator_before": true,
-                "label": "Upload",
-                "icon": "sap-icon--upload-to-cloud"
-            },
-            "exportProject": {
-                "separator_before": true,
-                "label": "Export",
-                "icon": "sap-icon--download-from-cloud"
-            }
         }
     }
 }).on('contextmenu', function (evt) {
