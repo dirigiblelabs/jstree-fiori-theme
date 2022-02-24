@@ -153,14 +153,13 @@ $('#jstree_demo').jstree({
                 "label": "New",
                 "icon": "sap-icon--write-new-document",
                 "submenu": {
+                    "create_file": {
+                        "label": "File",
+                        "icon": "sap-icon--document"
+                    },
                     "create_folder": {
                         "label": "Folder",
                         "icon": "sap-icon--folder-blank",
-                    },
-                    "create_file": {
-                        "separator_after": true,
-                        "label": "File",
-                        "icon": "sap-icon--file"
                     },
                 }
             },
