@@ -798,7 +798,6 @@ li.jstree-loading .jstree-icon:empty {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
   color: var(--sapField_TextColor, #32363a);
   border-style: solid;
   border-width: var(--sapField_BorderWidth, .0625rem);
@@ -824,14 +823,14 @@ li.jstree-loading .jstree-icon:empty {
 .jstree-fiori .jstree-rename-input:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
-  outline-offset: -.1875rem;
-  outline-width: var(--sapContent_FocusWidth, .0625rem);
-  outline-color: var(--sapContent_FocusColor, #000);
-  outline-style: var(--sapContent_FocusStyle, dotted);
+  outline-offset: -.1875rem !important;
+  outline-width: var(--sapContent_FocusWidth, .0625rem) !important;
+  outline-color: var(--sapContent_FocusColor, #000) !important;
+  outline-style: var(--sapContent_FocusStyle, dotted) !important;
 }
 .jstree-fiori .jstree-rename-input:hover {
-  background-color: var(--sapField_Hover_Background, #fff);
-  border-color: var(--sapField_Hover_BorderColor, #0854a0);
+  background-color: var(--sapField_Hover_Background, #fff) !important;
+  border-color: var(--sapField_Hover_BorderColor, #0854a0) !important;
 }
 /* Dirigible-specific stuff */
 .dg-jstree-indicator {
