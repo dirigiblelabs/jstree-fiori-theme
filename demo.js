@@ -2,6 +2,7 @@ let data = [
     {
         text: "Project 1",
         type: "project",
+        li_attr: { git: true },
         children: [
             {
                 text: "File 1",
@@ -27,6 +28,7 @@ let data = [
     {
         text: "Project 2",
         type: "project",
+        li_attr: { git: true },
         children: [
             {
                 text: "File 4",
@@ -53,7 +55,7 @@ let data = [
     },
     {
         text: "Project 3",
-        type: "gitProject",
+        type: "project",
         children: [
             {
                 text: "File 7",
@@ -138,11 +140,8 @@ $('#jstree_demo').jstree({
             icon: "jstree-folder"
         },
         project: {
-            icon: "sap-icon--folder"
+            icon: "jstree-project"
         },
-        gitProject: {
-            icon: "jstree-git"
-        }
     },
     contextmenu: {
         items: {

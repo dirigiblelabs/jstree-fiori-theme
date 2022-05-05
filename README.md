@@ -1,7 +1,7 @@
 # Fiori theme for jstree
 
-![Dark mode](screenshot-1.png)
-![Light mode](screenshot-2.png)
+![Light mode](screenshot-1.png)
+![Dark mode](screenshot-2.png)
 
 ## How to see demo
 
@@ -64,6 +64,25 @@ $("#jstree_demo").jstree({
         }
     },
 });
+```
+
+If you need to change the icons or store them in a different location, you can use CSS variables to set the correct url:
+
+```css
+:root {
+  --jstree-git: url("../fiori/git.svg");
+  --jstree-project: url("../fiori/project.svg");
+  --jstree-folder: url("../fiori/folder.svg");
+  --jstree-file: url("../fiori/file-code.svg");
+  --jstree-menu-arrow-right: url(../fiori/menu-arrow-right.svg);
+  --jstree-arrow-down: url("../fiori/arrow-down.svg");
+  --jstree-arrow-right: url("../fiori/arrow-right.svg");
+  --jstree-arrow-left: url("../fiori/arrow-left.svg");
+  --jstree-checkbox-checked: url("../fiori/checkbox-checked.svg");
+  --jstree-checkbox-unchecked: url("../fiori/checkbox-unchecked.svg");
+  --jstree-checkbox-tristate: url("../fiori/checkbox-tristate.svg");
+  --jstree-loader: url("../fiori/loading.svg");
+}
 ```
 
 Activate RTL:

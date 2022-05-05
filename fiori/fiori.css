@@ -1,10 +1,10 @@
 :root {
-  --jstree-fiori-animation: 0.2s;
+  --jstree-fiori-animation: 0.200s;
 }
 /* jsTree fiori theme */
 .jstree-fiori {
   font-family: var(--sapFontFamily, "72", "72full", Arial, Helvetica);
-  font-size: var(--sapFontSize, 0.875rem);
+  font-size: var(--sapFontSize, .875rem);
   background-color: var(--sapList_Background, #fff);
   color: var(--sapList_TextColor, #32363a);
 }
@@ -21,11 +21,11 @@
   height: calc(100% - 2rem);
 }
 .jstree .jstree-container-ul > li > .jstree-wholerow {
-  border-bottom: var(--sapList_BorderWidth, 0.0625rem) solid var(--sapList_BorderColor, #e5e5e5);
+  border-bottom: var(--sapList_BorderWidth, .0625rem) solid var(--sapList_BorderColor, #e5e5e5);
 }
 .jstree .jstree-container-ul > .jstree-node > ul {
   background: var(--sapList_AlternatingBackground, #f2f2f2);
-  border-bottom: var(--sapList_BorderWidth, 0.0625rem) solid transparent;
+  border-bottom: var(--sapList_BorderWidth, .0625rem) solid transparent;
 }
 .jstree-loading {
   color: var(--sapList_TextColor, #32363a);
@@ -162,7 +162,7 @@ li.jstree-loading .jstree-icon:empty {
 .vakata-context ul {
   position: absolute;
   background-color: var(--sapList_Background, #fff);
-  font-size: var(--sapFontSize, 0.875rem);
+  font-size: var(--sapFontSize, .875rem);
   line-height: var(--sapContent_LineHeight, 1.4);
   color: var(--sapTextColor, #32363a);
   font-family: var(--sapFontFamily, "72", "72full", Arial, Helvetica);
@@ -172,13 +172,9 @@ li.jstree-loading .jstree-icon:empty {
   padding: 0;
   margin: -4.85rem 0 0 0;
   border: 0;
-  -webkit-box-shadow: var(
-    --sapContent_Shadow1,
-    0 0 0 0.0625rem rgba(0, 0, 0, 0.42),
-    0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.3)
-  );
-  box-shadow: var(--sapContent_Shadow1, 0 0 0 0.0625rem rgba(0, 0, 0, 0.42), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.3));
-  border-radius: var(--sapElement_BorderCornerRadius, 0.25rem);
+  -webkit-box-shadow: var(--sapContent_Shadow1, 0 0 0 .0625rem rgba(0, 0, 0, .42), 0 .125rem .5rem 0 rgba(0, 0, 0, .3));
+  box-shadow: var(--sapContent_Shadow1, 0 0 0 .0625rem rgba(0, 0, 0, .42), 0 .125rem .5rem 0 rgba(0, 0, 0, .3));
+  border-radius: var(--sapElement_BorderCornerRadius, .25rem);
 }
 .vakata-context ul {
   list-style: none;
@@ -196,7 +192,7 @@ li.jstree-loading .jstree-icon:empty {
 .vakata-context li {
   list-style: none;
   display: inline;
-  font-size: var(--sapFontSize, 0.875rem);
+  font-size: var(--sapFontSize, .875rem);
   line-height: var(--sapContent_LineHeight, 1.4);
   color: var(--sapTextColor, #32363a);
   font-family: var(--sapFontFamily, "72", "72full", Arial, Helvetica);
@@ -219,12 +215,12 @@ li.jstree-loading .jstree-icon:empty {
   border-radius: 0;
 }
 .vakata-context li:first-child > a {
-  border-top-right-radius: var(--sapElement_BorderCornerRadius, 0.25rem);
-  border-top-left-radius: var(--sapElement_BorderCornerRadius, 0.25rem);
+  border-top-right-radius: var(--sapElement_BorderCornerRadius, .25rem);
+  border-top-left-radius: var(--sapElement_BorderCornerRadius, .25rem);
 }
 .vakata-context li:last-child > a {
-  border-bottom-right-radius: var(--sapElement_BorderCornerRadius, 0.25rem);
-  border-bottom-left-radius: var(--sapElement_BorderCornerRadius, 0.25rem);
+  border-bottom-right-radius: var(--sapElement_BorderCornerRadius, .25rem);
+  border-bottom-left-radius: var(--sapElement_BorderCornerRadius, .25rem);
 }
 .vakata-context li > a:hover {
   position: relative;
@@ -242,7 +238,7 @@ li.jstree-loading .jstree-icon:empty {
   color: var(--sapList_Active_TextColor, #fff);
 }
 .vakata-context li > a.vakata-context-parent {
-  background-image: url("../fiori/menu-arrow-right.svg");
+  background-image: var(--jstree-menu-arrow-right, url("../fiori/menu-arrow-right.svg"));
   background-position: right center;
   background-repeat: no-repeat;
 }
@@ -257,9 +253,9 @@ li.jstree-loading .jstree-icon:empty {
 .vakata-context .vakata-context-separator > a:hover {
   background-color: var(--sapGroup_ContentBorderColor, #d9d9d9);
   border: 0;
-  height: var(--sapElement_BorderWidth, 0.0625rem);
-  min-height: var(--sapElement_BorderWidth, 0.0625rem);
-  max-height: var(--sapElement_BorderWidth, 0.0625rem);
+  height: var(--sapElement_BorderWidth, .0625rem);
+  min-height: var(--sapElement_BorderWidth, .0625rem);
+  max-height: var(--sapElement_BorderWidth, .0625rem);
   padding: 0;
   margin: 0;
 }
@@ -267,7 +263,7 @@ li.jstree-loading .jstree-icon:empty {
 .vakata-context .vakata-contextmenu-disabled a:hover {
   color: var(--sapTextColor, #32363a);
   background-color: transparent;
-  opacity: var(--sapContent_DisabledOpacity, 0.4);
+  opacity: var(--sapContent_DisabledOpacity, .4);
   pointer-events: none;
 }
 .vakata-context li > a > i {
@@ -289,7 +285,7 @@ li.jstree-loading .jstree-icon:empty {
   display: none;
 }
 .vakata-context .vakata-contextmenu-shortcut {
-  font-size: var(--sapFontSize, 0.875rem);
+  font-size: var(--sapFontSize, .875rem);
   color: var(--sapContent_NonInteractiveIconColor, #6a6d70);
   float: right;
   margin-left: 2rem;
@@ -312,15 +308,11 @@ li.jstree-loading .jstree-icon:empty {
 #jstree-dnd {
   line-height: 2rem;
   margin: 0;
-  padding: 0 0.75rem !important;
+  padding: 0 .75rem !important;
   background: var(--sapList_Background, #fff);
-  -webkit-box-shadow: var(
-    --sapContent_Shadow1,
-    0 0 0 0.0625rem rgba(0, 0, 0, 0.42),
-    0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.3)
-  );
-  box-shadow: var(--sapContent_Shadow1, 0 0 0 0.0625rem rgba(0, 0, 0, 0.42), 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.3));
-  border-radius: var(--sapElement_BorderCornerRadius, 0.25rem);
+  -webkit-box-shadow: var(--sapContent_Shadow1, 0 0 0 .0625rem rgba(0, 0, 0, .42), 0 .125rem .5rem 0 rgba(0, 0, 0, .3));
+  box-shadow: var(--sapContent_Shadow1, 0 0 0 .0625rem rgba(0, 0, 0, .42), 0 .125rem .5rem 0 rgba(0, 0, 0, .3));
+  border-radius: var(--sapElement_BorderCornerRadius, .25rem);
 }
 #jstree-dnd .jstree-icon,
 #jstree-dnd .jstree-copy {
@@ -343,7 +335,7 @@ li.jstree-loading .jstree-icon:empty {
 .jstree-fiori .jstree-disabled {
   color: var(--sapTextColor, #32363a);
   background-color: transparent;
-  opacity: calc(var(--sapContent_DisabledOpacity, 0.4) + 0.1);
+  opacity: calc(var(--sapContent_DisabledOpacity, .4) + .1);
 }
 .jstree-fiori .jstree-disabled.jstree-hovered {
   background-color: transparent;
@@ -352,7 +344,7 @@ li.jstree-loading .jstree-icon:empty {
   background-color: transparent;
 }
 .jstree-fiori .jstree-disabled > .jstree-icon {
-  opacity: calc(var(--sapContent_DisabledOpacity, 0.4) + 0.1);
+  opacity: calc(var(--sapContent_DisabledOpacity, .4) + .1);
 }
 .jstree-fiori .jstree-search {
   font-style: italic;
@@ -395,7 +387,7 @@ li.jstree-loading .jstree-icon:empty {
 }
 .jstree-fiori .jstree-wholerow-clicked {
   background: var(--sapList_SelectionBackgroundColor, #e5f0fa);
-  border-bottom: var(--sapList_BorderWidth, 0.0625rem) solid var(--sapList_SelectionBorderColor, #0854a0);
+  border-bottom: var(--sapList_BorderWidth, .0625rem) solid var(--sapList_SelectionBorderColor, #0854a0);
 }
 .jstree-fiori .jstree-clicked .jstree-themeicon-custom {
   color: var(--sapList_TextColor, #32363a);
@@ -434,26 +426,26 @@ li.jstree-loading .jstree-icon:empty {
   background: transparent;
 }
 .jstree-fiori .jstree-open > .jstree-ocl {
-  -webkit-mask-size: 0.625rem;
-  mask-size: 0.625rem;
+  -webkit-mask-size: .625rem;
+  mask-size: .625rem;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/arrow-down.svg");
-  mask-image: url("../fiori/arrow-down.svg");
+  -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
+  mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
 }
 .jstree-fiori .jstree-closed > .jstree-ocl {
-  -webkit-mask-size: 0.625rem;
-  mask-size: 0.625rem;
+  -webkit-mask-size: .625rem;
+  mask-size: .625rem;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/arrow-right.svg");
-  mask-image: url("../fiori/arrow-right.svg");
+  -webkit-mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
+  mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
 }
 .jstree-fiori .jstree-leaf > .jstree-ocl {
   background-image: none;
@@ -479,8 +471,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/checkbox-unchecked.svg");
-  mask-image: url("../fiori/checkbox-unchecked.svg");
+  -webkit-mask-image: var(--jstree-checkbox-unchecked, url("../fiori/checkbox-unchecked.svg"));
+  mask-image: var(--jstree-checkbox-unchecked, url("../fiori/checkbox-unchecked.svg"));
 }
 .jstree-fiori.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
 .jstree-fiori .jstree-checked > .jstree-checkbox {
@@ -491,8 +483,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/checkbox-checked.svg");
-  mask-image: url("../fiori/checkbox-checked.svg");
+  -webkit-mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
+  mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
 }
 .jstree-fiori .jstree-anchor > .jstree-undetermined {
   -webkit-mask-size: 1rem;
@@ -502,8 +494,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/checkbox-tristate.svg");
-  mask-image: url("../fiori/checkbox-tristate.svg");
+  -webkit-mask-image: var(--jstree-checkbox-tristate, url("../fiori/checkbox-tristate.svg"));
+  mask-image: var(--jstree-checkbox-tristate, url("../fiori/checkbox-tristate.svg"));
 }
 .jstree-fiori > .jstree-striped {
   background-size: auto 44px;
@@ -512,24 +504,24 @@ li.jstree-loading .jstree-icon:empty {
   background: transparent;
 }
 .jstree-fiori.jstree-rtl .jstree-open > .jstree-ocl {
-  -webkit-mask-image: url("../fiori/arrow-down.svg");
-  mask-image: url("../fiori/arrow-down.svg");
+  -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
+  mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
 }
 .jstree-fiori.jstree-rtl .jstree-closed > .jstree-ocl {
-  -webkit-mask-image: url("../fiori/arrow-left.svg");
-  mask-image: url("../fiori/arrow-left.svg");
+  -webkit-mask-image: var(--jstree-arrow-left, url("../fiori/arrow-left.svg"));
+  mask-image: var(--jstree-arrow-left, url("../fiori/arrow-left.svg"));
 }
 .jstree-fiori.jstree-rtl > .jstree-no-dots .jstree-node,
 .jstree-fiori.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
 .jstree-fiori.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
-  -webkit-mask-image: url("../fiori/arrow-down.svg");
-  mask-image: url("../fiori/arrow-down.svg");
+  -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
+  mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
 }
 .jstree-fiori.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
-  -webkit-mask-image: url("../fiori/arrow-left.svg");
-  mask-image: url("../fiori/arrow-left.svg");
+  -webkit-mask-image: var(--jstree-arrow-left, url("../fiori/arrow-left.svg"));
+  mask-image: var(--jstree-arrow-left, url("../fiori/arrow-left.svg"));
 }
 .jstree-fiori .jstree-themeicon-custom {
   background-color: transparent;
@@ -545,8 +537,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: url("../fiori/loading.svg");
-  mask-image: url("../fiori/loading.svg");
+  -webkit-mask-image: var(--jstree-loader, url("../fiori/loading.svg"));
+  mask-image: var(--jstree-loader, url("../fiori/loading.svg"));
 }
 .jstree-fiori .jstree-file {
   -webkit-mask-size: 1rem;
@@ -556,8 +548,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: url("../fiori/file-code.svg");
-  mask-image: url("../fiori/file-code.svg");
+  -webkit-mask-image: var(--jstree-file, url("../fiori/file-code.svg"));
+  mask-image: var(--jstree-file, url("../fiori/file-code.svg"));
 }
 .jstree-fiori .jstree-clicked .jstree-file {
   background-color: var(--sapList_TextColor, #32363a);
@@ -570,13 +562,13 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: url("../fiori/folder.svg");
-  mask-image: url("../fiori/folder.svg");
+  -webkit-mask-image: var(--jstree-folder, url("../fiori/folder.svg"));
+  mask-image: var(--jstree-folder, url("../fiori/folder.svg"));
 }
 .jstree-fiori .jstree-clicked .jstree-folder {
   background-color: var(--sapList_TextColor, #32363a);
 }
-.jstree-fiori .jstree-git {
+.jstree-fiori .jstree-project {
   -webkit-mask-size: 1rem;
   mask-size: 1rem;
   -webkit-mask-repeat: no-repeat;
@@ -584,10 +576,14 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: url("../fiori/git.svg");
-  mask-image: url("../fiori/git.svg");
+  -webkit-mask-image: var(--jstree-project, url("../fiori/project.svg"));
+  mask-image: var(--jstree-project, url("../fiori/project.svg"));
 }
-.jstree-fiori .jstree-clicked .jstree-git {
+.jstree-fiori li[git="true"] .jstree-project {
+  -webkit-mask-image: var(--jstree-git, url("../fiori/git.svg"));
+  mask-image: var(--jstree-git, url("../fiori/git.svg"));
+}
+.jstree-fiori .jstree-clicked .jstree-project {
   background-color: var(--sapList_TextColor, #32363a);
 }
 .jstree-fiori > .jstree-container-ul > .jstree-node {
@@ -647,26 +643,26 @@ li.jstree-loading .jstree-icon:empty {
   background: transparent;
 }
 .jstree-fiori-compact .jstree-open > .jstree-ocl {
-  -webkit-mask-size: 0.469rem;
-  mask-size: 0.469rem;
+  -webkit-mask-size: .469rem;
+  mask-size: .469rem;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/arrow-down.svg");
-  mask-image: url("../fiori/arrow-down.svg");
+  -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
+  mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
 }
 .jstree-fiori-compact .jstree-closed > .jstree-ocl {
-  -webkit-mask-size: 0.469rem;
-  mask-size: 0.469rem;
+  -webkit-mask-size: .469rem;
+  mask-size: .469rem;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/arrow-right.svg");
-  mask-image: url("../fiori/arrow-right.svg");
+  -webkit-mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
+  mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
 }
 .jstree-fiori-compact .jstree-leaf > .jstree-ocl {
   background-image: none;
@@ -676,26 +672,26 @@ li.jstree-loading .jstree-icon:empty {
   background: transparent;
 }
 .jstree-fiori-compact > .jstree-no-dots .jstree-open > .jstree-ocl {
-  -webkit-mask-size: 0.469rem;
-  mask-size: 0.469rem;
+  -webkit-mask-size: .469rem;
+  mask-size: .469rem;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/arrow-down.svg");
-  mask-image: url("../fiori/arrow-down.svg");
+  -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
+  mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
 }
 .jstree-fiori-compact > .jstree-no-dots .jstree-closed > .jstree-ocl {
-  -webkit-mask-size: 0.469rem;
-  mask-size: 0.469rem;
+  -webkit-mask-size: .469rem;
+  mask-size: .469rem;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/arrow-right.svg");
-  mask-image: url("../fiori/arrow-right.svg");
+  -webkit-mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
+  mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
 }
 .jstree-fiori-compact .jstree-disabled {
   background: transparent;
@@ -715,8 +711,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/checkbox-checked.svg");
-  mask-image: url("../fiori/checkbox-checked.svg");
+  -webkit-mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
+  mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
 }
 .jstree-fiori-compact .jstree-anchor > .jstree-undetermined {
   -webkit-mask-size: 1rem;
@@ -726,8 +722,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: url("../fiori/checkbox-tristate.svg");
-  mask-image: url("../fiori/checkbox-tristate.svg");
+  -webkit-mask-image: var(--jstree-checkbox-tristate, url("../fiori/checkbox-tristate.svg"));
+  mask-image: var(--jstree-checkbox-tristate, url("../fiori/checkbox-tristate.svg"));
 }
 .jstree-fiori-compact .jstree-themeicon-custom {
   background-color: transparent;
@@ -743,8 +739,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: url("../fiori/file-code.svg");
-  mask-image: url("../fiori/file-code.svg");
+  -webkit-mask-image: var(--jstree-file, url("../fiori/file-code.svg"));
+  mask-image: var(--jstree-file, url("../fiori/file-code.svg"));
 }
 .jstree-fiori-compact .jstree-folder {
   -webkit-mask-size: 1rem;
@@ -754,10 +750,10 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: url("../fiori/folder.svg");
-  mask-image: url("../fiori/folder.svg");
+  -webkit-mask-image: var(--jstree-folder, url("../fiori/folder.svg"));
+  mask-image: var(--jstree-folder, url("../fiori/folder.svg"));
 }
-.jstree-fiori-compact .jstree-git {
+.jstree-fiori-compact .jstree-project {
   -webkit-mask-size: 1rem;
   mask-size: 1rem;
   -webkit-mask-repeat: no-repeat;
@@ -765,8 +761,12 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: url("../fiori/git.svg");
-  mask-image: url("../fiori/git.svg");
+  -webkit-mask-image: var(--jstree-project, url("../fiori/project.svg"));
+  mask-image: var(--jstree-project, url("../fiori/project.svg"));
+}
+.jstree-fiori-compact li[git="true"] .jstree-project {
+  -webkit-mask-image: var(--jstree-git, url("../fiori/git.svg"));
+  mask-image: var(--jstree-git, url("../fiori/git.svg"));
 }
 .jstree-fiori-compact > .jstree-container-ul > .jstree-node {
   margin-left: 0;
@@ -774,7 +774,7 @@ li.jstree-loading .jstree-icon:empty {
 }
 #jstree-dnd.jstree-fiori-compact {
   line-height: 2rem;
-  padding: 0 0.25rem;
+  padding: 0 .25rem;
 }
 #jstree-dnd.jstree-fiori-compact .jstree-ok,
 #jstree-dnd.jstree-fiori-compact .jstree-er {
