@@ -10,7 +10,7 @@ let data = [
             },
             {
                 text: "Folder 1",
-                state: { submodule: true },
+                state: { state: 'S' },
                 type: "folder",
                 children: [
                     {
@@ -32,7 +32,7 @@ let data = [
         children: [
             {
                 text: "File 4",
-                state: { added: true },
+                state: { state: 'A' },
                 type: "file"
             },
             {
@@ -41,12 +41,12 @@ let data = [
                 children: [
                     {
                         text: "File 5",
-                        state: { modified: true },
+                        state: { state: 'M' },
                         type: "file",
                     },
                     {
                         text: "File 6",
-                        state: { conflict: true },
+                        state: { state: 'C' },
                         type: "file",
                     },
                 ],
@@ -67,17 +67,17 @@ let data = [
                 children: [
                     {
                         text: "File 8",
-                        state: { deleted: true },
+                        state: { state: 'D' },
                         type: "file"
                     },
                     {
                         text: "File 9",
-                        state: { renamed: true },
+                        state: { state: 'R' },
                         type: "file"
                     },
                     {
                         text: "File 10",
-                        state: { untracked: true },
+                        state: { state: 'U' },
                         type: "file",
                     },
                 ],
@@ -88,17 +88,17 @@ let data = [
                 children: [
                     {
                         text: "File 80",
-                        state: { deleted: true },
+                        state: { state: 'D' },
                         type: "file"
                     },
                     {
                         text: "File 8",
-                        state: { deleted: true },
+                        state: { state: 'D' },
                         type: "file"
                     },
                     {
                         text: "File 9",
-                        state: { renamed: true },
+                        state: { state: 'R' },
                         type: "file"
                     },
                     {
@@ -107,7 +107,7 @@ let data = [
                     },
                     {
                         text: "File 10",
-                        state: { untracked: true },
+                        state: { state: 'U' },
                         type: "file",
                     },
                 ],

@@ -47,22 +47,22 @@ $("#jstree_demo").jstree({
   },
   plugins: ["indicator", "types", "wholerow"], // types and wholerow are necessary
   types: {
-        "default": {
-            icon: "sap-icon--question-mark"
-        },
-        file: {
-            icon: "jstree-file"
-        },
-        folder: {
-            icon: "jstree-folder"
-        },
-        project: {
-            icon: "sap-icon--folder"
-        },
-        gitProject: {
-            icon: "jstree-git"
-        }
+    default: {
+      icon: "sap-icon--question-mark",
     },
+    file: {
+      icon: "jstree-file",
+    },
+    folder: {
+      icon: "jstree-folder",
+    },
+    project: {
+      icon: "sap-icon--folder",
+    },
+    gitProject: {
+      icon: "jstree-git",
+    },
+  },
 });
 ```
 
@@ -109,7 +109,30 @@ The indicator jstree plugin can only be used with the provided jstree fiori them
 
 You can activate it by including the `indicator.plugin.js` file and then adding "indicator" in the `plugins` jstree configuration list.
 
-In order for it to work, you must include `added`, `modified`, `deleted`, `untracked`, `conflict`, `renamed` or `submodule` booleans to the `state` object of every node that requires it.
+In order for it to work, you must set the `state` key inside the `state` object to one of the following values: `A`, `M`, `D`, `U`, `C`, `R` or `S` (see 'Indicator letters and their meaning' below).
+
+Example:
+
+```json
+{
+  "text": "File",
+  "state": { "state": "A" },
+  "type": "file"
+}
+```
+
+You can also manually set the `state.containsChanges` key to `true` of a parent object, although this is not necessary as the indicator plugin will automatically assign it depending on the state of it's children.
+
+Example:
+
+```json
+{
+  "text": "Folder 1",
+  "state": { "containsChanges": true },
+  "type": "folder",
+  "children": []
+}
+```
 
 It also includes a sort functionality and when that functionality is enabled, using it with the "sort" plugin may give weird results. If you need to use the "sort" plugin, disable the sort in this plugin first.
 
