@@ -109,14 +109,14 @@ The indicator jstree plugin can only be used with the provided jstree fiori them
 
 You can activate it by including the `indicator.plugin.js` file and then adding "indicator" in the `plugins` jstree configuration list.
 
-In order for it to work, you must set the `state` key inside the `state` object to one of the following values: `A`, `M`, `D`, `U`, `C`, `R` or `S` (see 'Indicator letters and their meaning' below).
+In order for it to work, you must set the `status` key inside the `state` object to one of the following values: `A`, `M`, `D`, `U`, `C`, `R` or `S` (see 'Indicator letters and their meaning' below).
 
 Example:
 
 ```json
 {
   "text": "File",
-  "state": { "state": "A" },
+  "state": { "status": "A" },
   "type": "file"
 }
 ```

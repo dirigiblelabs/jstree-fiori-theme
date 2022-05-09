@@ -10,7 +10,7 @@ let data = [
             },
             {
                 text: "Folder 1",
-                state: { state: 'S' },
+                state: { status: 'S' },
                 type: "folder",
                 children: [
                     {
@@ -32,7 +32,7 @@ let data = [
         children: [
             {
                 text: "File 4",
-                state: { state: 'A' },
+                state: { status: 'A' },
                 type: "file"
             },
             {
@@ -41,12 +41,12 @@ let data = [
                 children: [
                     {
                         text: "File 5",
-                        state: { state: 'M' },
+                        state: { status: 'M' },
                         type: "file",
                     },
                     {
                         text: "File 6",
-                        state: { state: 'C' },
+                        state: { status: 'C' },
                         type: "file",
                     },
                 ],
@@ -67,17 +67,17 @@ let data = [
                 children: [
                     {
                         text: "File 8",
-                        state: { state: 'D' },
+                        state: { status: 'D' },
                         type: "file"
                     },
                     {
                         text: "File 9",
-                        state: { state: 'R' },
+                        state: { status: 'R' },
                         type: "file"
                     },
                     {
                         text: "File 10",
-                        state: { state: 'U' },
+                        state: { status: 'U' },
                         type: "file",
                     },
                 ],
@@ -88,17 +88,17 @@ let data = [
                 children: [
                     {
                         text: "File 80",
-                        state: { state: 'D' },
+                        state: { status: 'D' },
                         type: "file"
                     },
                     {
                         text: "File 8",
-                        state: { state: 'D' },
+                        state: { status: 'D' },
                         type: "file"
                     },
                     {
                         text: "File 9",
-                        state: { state: 'R' },
+                        state: { status: 'R' },
                         type: "file"
                     },
                     {
@@ -107,7 +107,7 @@ let data = [
                     },
                     {
                         text: "File 10",
-                        state: { state: 'U' },
+                        state: { status: 'U' },
                         type: "file",
                     },
                 ],

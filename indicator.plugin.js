@@ -47,9 +47,9 @@
                 if (node.state.containsChanges) {
                     isDotClass = true;
                     indicatorClass = indicatorClasses['CD'];
-                } else if (node.state.state) {
-                    indicatorText = node.state.state;
-                    indicatorClass = indicatorClasses[node.state.state];
+                } else if (node.state.status) {
+                    indicatorText = node.state.status;
+                    indicatorClass = indicatorClasses[node.state.status];
                 }
                 if (indicatorClass) {
                     const link = element.querySelector("a:first-of-type");
@@ -119,7 +119,7 @@
                 } else if (!obj.state.containsChanges) {
                     for (let i = 0; i < obj.children.length; i++) {
                         let child = this._model.data[obj.children[i]];
-                        if (child.state.state) {
+                        if (child.state.status) {
                             containsChanges = true;
                             for (let j = 0; j < child.parents.length; j++) {
                                 let childParent = this._model.data[child.parents[j]];
