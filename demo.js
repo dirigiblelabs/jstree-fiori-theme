@@ -118,6 +118,18 @@ let data = [
         text: "Unknown file",
         type: "image-file"
     },
+    {
+        text: "Project 4",
+        type: "project",
+        state: { opened: true },
+        children: [
+            {
+                text: "Loading...",
+                type: "spinner",
+                li_attr: { spinner: true },
+            }
+        ]
+    },
 ];
 
 $('#jstree_demo').jstree({
@@ -141,6 +153,9 @@ $('#jstree_demo').jstree({
         },
         project: {
             icon: "jstree-project"
+        },
+        spinner: {
+            icon: "jstree-spinner"
         },
     },
     contextmenu: {
