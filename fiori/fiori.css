@@ -407,31 +407,60 @@ li.jstree-loading .jstree-icon:empty {
   margin-left: 1.25rem;
   min-width: 2.75rem;
 }
+.jstree-fiori-compact .jstree-node {
+  min-height: 2rem;
+  line-height: 2rem;
+  margin-left: 1.25rem;
+  min-width: 2rem;
+}
 .jstree-fiori .jstree-anchor {
   line-height: 2.75rem;
   height: 2.75rem;
+}
+.jstree-fiori-compact .jstree-anchor {
+  line-height: 2rem;
+  height: 2rem;
 }
 .jstree-fiori .jstree-icon {
   width: 2.75rem;
   height: 2.75rem;
   line-height: 2.75rem;
 }
+.jstree-fiori-compact .jstree-icon {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+}
 .jstree-fiori .jstree-icon:empty:not(.jstree-spinner) {
   width: 2rem;
   height: 2.75rem;
   line-height: 2.75rem;
 }
-.jstree-fiori.jstree-rtl .jstree-node {
+.jstree-fiori-compact .jstree-icon:empty:not(.jstree-spinner) {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+.jstree-fiori.jstree-rtl .jstree-node,
+.jstree-fiori-compact.jstree-rtl .jstree-node {
   margin-right: 1.25rem;
 }
 .jstree-fiori .jstree-wholerow {
   height: 2.75rem;
 }
+.jstree-fiori-compact .jstree-wholerow {
+  height: 2rem;
+}
 .jstree-fiori .jstree-node,
 .jstree-fiori .jstree-icon {
   background-image: none;
 }
-.jstree-fiori .jstree-last {
+.jstree-fiori-compact .jstree-node,
+.jstree-fiori-compact .jstree-icon {
+  background-image: none;
+}
+.jstree-fiori .jstree-last,
+.jstree-fiori-compact .jstree-last {
   background: transparent;
 }
 .jstree-fiori .jstree-open > .jstree-ocl {
@@ -445,6 +474,10 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
   mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
 }
+.jstree-fiori-compact .jstree-open > .jstree-ocl {
+  -webkit-mask-size: 0.469rem;
+  mask-size: 0.469rem;
+}
 .jstree-fiori .jstree-closed > .jstree-ocl {
   -webkit-mask-size: 0.625rem;
   mask-size: 0.625rem;
@@ -456,11 +489,18 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
   mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
 }
-.jstree-fiori .jstree-leaf > .jstree-ocl {
+.jstree-fiori-compact .jstree-closed > .jstree-ocl {
+  -webkit-mask-size: 0.469rem;
+  mask-size: 0.469rem;
+}
+.jstree-fiori .jstree-leaf > .jstree-ocl,
+.jstree-fiori-compact .jstree-leaf > .jstree-ocl {
   background-image: none;
 }
 .jstree-fiori > .jstree-no-dots .jstree-node,
-.jstree-fiori > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+.jstree-fiori > .jstree-no-dots .jstree-leaf > .jstree-ocl,
+.jstree-fiori-compact > .jstree-no-dots .jstree-node,
+.jstree-fiori-compact > .jstree-no-dots .jstree-leaf > .jstree-ocl {
   background: transparent;
 }
 .jstree-fiori .jstree-disabled {
@@ -484,7 +524,9 @@ li.jstree-loading .jstree-icon:empty {
   mask-image: var(--jstree-checkbox-unchecked, url("../fiori/checkbox-unchecked.svg"));
 }
 .jstree-fiori.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
-.jstree-fiori .jstree-checked > .jstree-checkbox {
+.jstree-fiori .jstree-checked > .jstree-checkbox,
+.jstree-fiori-compact.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
+.jstree-fiori-compact .jstree-checked > .jstree-checkbox {
   -webkit-mask-size: 1rem;
   mask-size: 1rem;
   -webkit-mask-repeat: no-repeat;
@@ -495,7 +537,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
   mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
 }
-.jstree-fiori .jstree-anchor > .jstree-undetermined {
+.jstree-fiori .jstree-anchor > .jstree-undetermined,
+.jstree-fiori-compact .jstree-anchor > .jstree-undetermined {
   -webkit-mask-size: 1rem;
   mask-size: 1rem;
   -webkit-mask-repeat: no-repeat;
@@ -532,7 +575,8 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-image: var(--jstree-arrow-left, url("../fiori/arrow-left.svg"));
   mask-image: var(--jstree-arrow-left, url("../fiori/arrow-left.svg"));
 }
-.jstree-fiori .jstree-themeicon-custom {
+.jstree-fiori .jstree-themeicon-custom,
+.jstree-fiori-compact .jstree-themeicon-custom {
   background-color: transparent;
   background-image: none;
   color: var(--sapList_TextColor, #32363a);
@@ -574,6 +618,10 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-animation: jstreeSpinnerRotate var(--jstree-spinner-animation) infinite linear;
   animation: jstreeSpinnerRotate var(--jstree-spinner-animation) infinite linear;
 }
+.jstree-fiori-compact .jstree-spinner {
+  line-height: 2rem;
+  margin: 0.5rem 0.625rem;
+}
 .jstree-fiori .jstree-file {
   -webkit-mask-size: 1rem;
   mask-size: 1rem;
@@ -602,7 +650,7 @@ li.jstree-loading .jstree-icon:empty {
 .jstree-fiori .jstree-clicked .jstree-folder {
   background-color: var(--sapList_TextColor, #32363a);
 }
-.jstree-fiori .jstree-project, .jstree-fiori-compact .jstree-project {
+.jstree-fiori .jstree-project {
   -webkit-mask-size: 1rem;
   mask-size: 1rem;
   -webkit-mask-repeat: no-repeat;
@@ -626,7 +674,7 @@ li.jstree-loading .jstree-icon:empty {
 }
 #jstree-dnd.jstree-fiori {
   line-height: 2rem;
-  padding: 0 4px;
+  padding: 0 0.25rem;
 }
 #jstree-dnd.jstree-fiori .jstree-ok,
 #jstree-dnd.jstree-fiori .jstree-er {
@@ -643,40 +691,7 @@ li.jstree-loading .jstree-icon:empty {
 .jstree-fiori.jstree-rtl .jstree-last {
   background: transparent;
 }
-.jstree-fiori-compact .jstree-node {
-  min-height: 2rem;
-  line-height: 2rem;
-  margin-left: 1.25rem;
-  min-width: 2rem;
-}
-.jstree-fiori-compact .jstree-anchor {
-  line-height: 2rem;
-  height: 2rem;
-}
-.jstree-fiori-compact .jstree-icon:not(.jstree-spinner) {
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
-}
-.jstree-fiori-compact .jstree-icon:empty:not(.jstree-spinner) {
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
-}
-.jstree-fiori-compact.jstree-rtl .jstree-node {
-  margin-right: 1.25rem;
-}
-.jstree-fiori-compact .jstree-wholerow {
-  height: 2rem;
-}
-.jstree-fiori-compact .jstree-node,
-.jstree-fiori-compact .jstree-icon {
-  background-image: none;
-}
-.jstree-fiori-compact .jstree-last {
-  background: transparent;
-}
-.jstree-fiori-compact .jstree-open > .jstree-ocl {
+.jstree-fiori > .jstree-no-dots .jstree-open > .jstree-ocl {
   -webkit-mask-size: 0.469rem;
   mask-size: 0.469rem;
   -webkit-mask-repeat: no-repeat;
@@ -687,7 +702,7 @@ li.jstree-loading .jstree-icon:empty {
   -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
   mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
 }
-.jstree-fiori-compact .jstree-closed > .jstree-ocl {
+.jstree-fiori > .jstree-no-dots .jstree-closed > .jstree-ocl {
   -webkit-mask-size: 0.469rem;
   mask-size: 0.469rem;
   -webkit-mask-repeat: no-repeat;
@@ -697,134 +712,6 @@ li.jstree-loading .jstree-icon:empty {
   background-color: var(--sapButton_IconColor, #0854a0);
   -webkit-mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
   mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
-}
-.jstree-fiori-compact .jstree-leaf > .jstree-ocl {
-  background-image: none;
-}
-.jstree-fiori-compact > .jstree-no-dots .jstree-node,
-.jstree-fiori-compact > .jstree-no-dots .jstree-leaf > .jstree-ocl {
-  background: transparent;
-}
-.jstree-fiori-compact > .jstree-no-dots .jstree-open > .jstree-ocl {
-  -webkit-mask-size: 0.469rem;
-  mask-size: 0.469rem;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
-  mask-image: var(--jstree-arrow-down, url("../fiori/arrow-down.svg"));
-}
-.jstree-fiori-compact > .jstree-no-dots .jstree-closed > .jstree-ocl {
-  -webkit-mask-size: 0.469rem;
-  mask-size: 0.469rem;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
-  mask-image: var(--jstree-arrow-right, url("../fiori/arrow-right.svg"));
-}
-.jstree-fiori-compact .jstree-disabled {
-  background: transparent;
-}
-.jstree-fiori-compact .jstree-disabled.jstree-hovered {
-  background: transparent;
-}
-.jstree-fiori-compact .jstree-disabled.jstree-clicked {
-  background: var(--sapList_Background, #fff);
-}
-.jstree-fiori-compact.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
-.jstree-fiori-compact .jstree-checked > .jstree-checkbox {
-  -webkit-mask-size: 1rem;
-  mask-size: 1rem;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
-  mask-image: var(--jstree-checkbox-checked, url("../fiori/checkbox-checked.svg"));
-}
-.jstree-fiori-compact .jstree-anchor > .jstree-undetermined {
-  -webkit-mask-size: 1rem;
-  mask-size: 1rem;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--sapButton_IconColor, #0854a0);
-  -webkit-mask-image: var(--jstree-checkbox-tristate, url("../fiori/checkbox-tristate.svg"));
-  mask-image: var(--jstree-checkbox-tristate, url("../fiori/checkbox-tristate.svg"));
-}
-.jstree-fiori-compact .jstree-themeicon-custom {
-  background-color: transparent;
-  background-image: none;
-  color: var(--sapList_TextColor, #32363a);
-  font-size: 1rem;
-}
-.jstree-fiori-compact .jstree-spinner {
-  line-height: 2rem;
-  margin: 0.5rem 0.625rem;
-}
-.jstree-fiori-compact .jstree-file {
-  -webkit-mask-size: 1rem;
-  mask-size: 1rem;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: var(--jstree-file, url("../fiori/file-code.svg"));
-  mask-image: var(--jstree-file, url("../fiori/file-code.svg"));
-}
-.jstree-fiori-compact .jstree-folder {
-  -webkit-mask-size: 1rem;
-  mask-size: 1rem;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: var(--jstree-folder, url("../fiori/folder.svg"));
-  mask-image: var(--jstree-folder, url("../fiori/folder.svg"));
-}
-.jstree-fiori-compact .jstree-project {
-  -webkit-mask-size: 1rem;
-  mask-size: 1rem;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--sapList_TextColor, #32363a);
-  -webkit-mask-image: var(--jstree-project, url("../fiori/project.svg"));
-  mask-image: var(--jstree-project, url("../fiori/project.svg"));
-}
-.jstree-fiori-compact li[git="true"] .jstree-project {
-  -webkit-mask-image: var(--jstree-git, url("../fiori/git.svg"));
-  mask-image: var(--jstree-git, url("../fiori/git.svg"));
-}
-.jstree-fiori-compact > .jstree-container-ul > .jstree-node {
-  margin-left: 0;
-  margin-right: 0;
-}
-#jstree-dnd.jstree-fiori-compact {
-  line-height: 2rem;
-  padding: 0 0.25rem;
-}
-#jstree-dnd.jstree-fiori-compact .jstree-ok,
-#jstree-dnd.jstree-fiori-compact .jstree-er {
-  background-image: none;
-  background-repeat: no-repeat;
-  background-color: transparent;
-}
-#jstree-dnd.jstree-fiori-compact i {
-  background: transparent;
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
 }
 .jstree-fiori .jstree-rename-input {
   font-size: var(--sapFontSize, 0.875rem);

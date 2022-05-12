@@ -103,6 +103,30 @@ Leave extra space after the last row for right clicking and activating the conte
 <div id="jstree_demo" class="jstree-fiori--context-menu"></div>
 ```
 
+## Spinner row
+
+There may be cases where you get your data from a back-end and the request could take some time. In those cases, you can temporally insert a spinner item that will show a spinning animation to indicate that something is being done.
+
+Example:
+
+Declare the icon type:
+
+```javascript
+spinner: {
+  icon: "jstree-spinner";
+}
+```
+
+Add the following element:
+
+```json
+{
+  "text": "Loading...",
+  "type": "spinner",
+  "li_attr": { "spinner": true }
+}
+```
+
 ## Indicator plugin
 
 The indicator jstree plugin can only be used with the provided jstree fiori theme, SAP 72 font, SAP icons, SAP Theming, "wholerow" and "types" plugin.

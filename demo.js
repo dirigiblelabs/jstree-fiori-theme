@@ -116,7 +116,8 @@ let data = [
     },
     {
         text: "Unknown file",
-        type: "image-file"
+        type: "image-file",
+        state: { disabled: true }
     },
     {
         text: "Project 4",
@@ -136,7 +137,7 @@ $('#jstree_demo').jstree({
     core: {
         themes: {
             name: "fiori",
-            // variant: "compact",
+            variant: "compact",
         },
         data: data,
     },
