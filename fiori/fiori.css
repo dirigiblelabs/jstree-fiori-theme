@@ -431,12 +431,30 @@ li.jstree-loading .jstree-icon:empty {
   height: 2rem;
   line-height: 2rem;
 }
-.jstree-fiori .jstree-icon:empty:not(.jstree-spinner) {
+.jstree-fiori .jstree-icon:empty {
   width: 2rem;
   height: 2.75rem;
   line-height: 2.75rem;
 }
-.jstree-fiori-compact .jstree-icon:empty:not(.jstree-spinner) {
+.jstree-fiori .jstree-node[spinner] .jstree-themeicon.jstree-icon:empty {
+  width: 0.875rem;
+  height: 0.875rem;
+  line-height: 2.75rem;
+  clear: both;
+  margin: 0.875rem 0.625rem;
+  box-sizing: border-box;
+  border: 0.188rem transparent solid;
+  border-top: 0.188rem var(--sapList_TextColor, #32363a) solid;
+  border-right: 0.188rem var(--sapList_TextColor, #32363a) solid;
+  border-radius: 50%;
+  -webkit-animation: jstreeSpinnerRotate var(--jstree-spinner-animation) infinite linear;
+  animation: jstreeSpinnerRotate var(--jstree-spinner-animation) infinite linear;
+}
+.jstree-fiori-compact .jstree-node[spinner] .jstree-themeicon.jstree-icon:empty {
+  line-height: 2rem;
+  margin: 0.5rem 0.625rem;
+}
+.jstree-fiori-compact .jstree-icon:empty {
   width: 2rem;
   height: 2rem;
   line-height: 2rem;
@@ -603,24 +621,6 @@ li.jstree-loading .jstree-icon:empty {
 }
 .jstree-fiori .jstree-node[spinner] .jstree-checkbox {
   visibility: hidden;
-}
-.jstree-fiori .jstree-spinner {
-  width: 0.875rem;
-  height: 0.875rem;
-  line-height: 2.75rem;
-  clear: both;
-  margin: 0.875rem 0.625rem;
-  box-sizing: border-box;
-  border: 0.188rem transparent solid;
-  border-top: 0.188rem var(--sapList_TextColor, #32363a) solid;
-  border-right: 0.188rem var(--sapList_TextColor, #32363a) solid;
-  border-radius: 50%;
-  -webkit-animation: jstreeSpinnerRotate var(--jstree-spinner-animation) infinite linear;
-  animation: jstreeSpinnerRotate var(--jstree-spinner-animation) infinite linear;
-}
-.jstree-fiori-compact .jstree-spinner {
-  line-height: 2rem;
-  margin: 0.5rem 0.625rem;
 }
 .jstree-fiori .jstree-file {
   -webkit-mask-size: 1rem;
