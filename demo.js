@@ -2,6 +2,7 @@ let data = [
     {
         text: "Project 1",
         type: "project",
+        state: { opened: true },
         li_attr: { git: true },
         children: [
             {
@@ -124,6 +125,14 @@ let data = [
         type: "project",
         state: { opened: true },
         children: [
+            {
+                text: "File 2",
+                type: "file"
+            },
+            {
+                text: "File 3",
+                type: "file"
+            },
             {
                 text: "Loading...",
                 type: "spinner",

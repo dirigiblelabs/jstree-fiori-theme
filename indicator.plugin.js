@@ -30,11 +30,13 @@
         customSort: function (firstNodeId, secondNodeId) {
             let firstNode = this.get_node(firstNodeId);
             let secondNode = this.get_node(secondNodeId);
-            if (firstNode.type == secondNode.type)
-                return firstNode.text.localeCompare(secondNode.text, "en", { numeric: true, sensitivity: "base" });
-            else if (firstNode.type === "folder") return false;
-            else if (secondNode.type === "folder") return true;
-            else return firstNode.text.localeCompare(secondNode.text, "en", { numeric: true, sensitivity: "base" });
+            if (firstNode.type === "spinner") return -1;
+            else if (secondNode.type === "spinner") return 1;
+            else if (firstNode.type === secondNode.type)
+                return firstNode.text.localeCompare(secondNode.text, "en-GB", { numeric: true, sensitivity: "base" });
+            else if (firstNode.type === "folder") return -1;
+            else if (secondNode.type === "folder") return 1;
+            else return firstNode.text.localeCompare(secondNode.text, "en-GB", { numeric: true, sensitivity: "base" });
         },
         rowIndicator: function (element, node) {
             if (node) {
