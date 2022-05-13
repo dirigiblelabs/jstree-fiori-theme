@@ -31,6 +31,9 @@
 .jstree-loading {
   color: var(--sapList_TextColor, #32363a);
 }
+li.jstree-hidden {
+  display: none;
+}
 li.jstree-loading {
   display: -webkit-box;
   display: -ms-flexbox;
