@@ -2,6 +2,7 @@
 
 ![Light mode](screenshot-1.png)
 ![Dark mode](screenshot-2.png)
+![List mode](list-mode.png)
 
 ## How to see demo
 
@@ -101,6 +102,14 @@ Leave extra space after the last row for right clicking and activating the conte
 
 ```html
 <div id="jstree_demo" class="jstree-fiori--context-menu"></div>
+```
+
+## List mode
+
+If you want to use jstree as a list, you can do it by passing a data object with no children and add the `jstree-list-mode` class.
+
+```html
+<div id="jstree_demo" class="jstree-list-mode"></div>
 ```
 
 ## Spinner row
