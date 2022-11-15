@@ -2,7 +2,23 @@
 
 ![Light mode](screenshot-1.png)
 ![Dark mode](screenshot-2.png)
+#### List mode
 ![List mode](list-mode.png)
+
+#### Main loader
+Used during the first data load, when JSTree initializes
+
+![Main loader](main-loader.jpg)
+
+#### Async loader
+Used during the async loading of a node
+
+![Async loader](async-loader.jpg)
+
+#### Action loader
+Used when there is an async task inside a node
+
+![Action loader](action-loader.jpg)
 
 ## How to see demo
 
@@ -24,10 +40,10 @@ Include in your headers:
 
 ```html
 <!-- SAP icons from Fundamental-styles -->
-<link href="https://unpkg.com/fundamental-styles@0.21.1/dist/icon.css" rel="stylesheet" />
+<link href="https://unpkg.com/fundamental-styles@0.25.0/dist/icon.css" rel="stylesheet" />
 <!-- SAP theming. Replace 'sap_fiori_3' with 'sap_fiori_3_dark' for dark theme -->
 <link
-  href="https://unpkg.com/@sap-theming/theming-base-content@11.1.34/content/Base/baseLib/sap_fiori_3/css_variables.css"
+  href="https://unpkg.com/@sap-theming/theming-base-content@11.1.44/content/Base/baseLib/sap_fiori_3/css_variables.css"
   rel="stylesheet"
 />
 <!-- The jstree theme itself -->
