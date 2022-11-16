@@ -152,6 +152,17 @@ Add the following element:
 }
 ```
 
+## Italic text
+
+If you want to apply an italic font style to the title of a row, add the `isitalic` attribute:
+
+```json
+{
+  "text": "...",
+  "a_attr": { "isitalic": true },
+}
+```
+
 ## Indicator plugin
 
 The indicator jstree plugin can only be used with the provided jstree fiori theme, SAP 72 font, SAP icons, SAP Theming, "wholerow" and "types" plugin.

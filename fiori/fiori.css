@@ -707,6 +707,9 @@ li.jstree-loading:not([aria-busy="true"]) .jstree-icon:empty {
   margin-left: 0;
   margin-right: 0;
 }
+.jstree-fiori > .jstree-container-ul > .jstree-node a[isitalic="true"] {
+  font-style: italic;
+}
 #jstree-dnd.jstree-fiori {
   line-height: 2rem;
   padding: 0 0.25rem;
